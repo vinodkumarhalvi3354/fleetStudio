@@ -1,12 +1,12 @@
 const express = require('express');
-const cors = require('cors'); // Import cors package
+const cors = require('cors'); 
 const app = express();
 const routes = require('./routes');
 const dotenv = require('dotenv');
 
 dotenv.config();
 
-// Use CORS to allow frontend access
+
 app.use(cors());
 
 const PORT = process.env.PORT || 5000;
