@@ -1,24 +1,3 @@
-// import React from 'react';
-// import { Route, Routes } from 'react-router-dom';
-// import CommitDetails from './components/CommitDetails';
-// import Header from './components/Header';
-
-// function App() {
-//   return (
-//     <div>
-//       <Header />
-//       <Routes>
-//         <Route
-//           path="/repositories/:owner/:repository/commit/:commitSHA"
-//           component={CommitDetails}
-//         />
-//       </Routes>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 
 import React from 'react';
 import CommitDetails from './components/CommitDetails';

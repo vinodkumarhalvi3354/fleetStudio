@@ -1,44 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import { useParams } from 'react-router-dom';
-// import CodeDiff from './CodeDiff';
-
-// function CommitDetails() {
-//   const { owner, repository, commitSHA } = useParams();
-//   const [commit, setCommit] = useState(null);
-
-//   useEffect(() => {
-//     const fetchCommitData = async () => {
-//       try {
-//         const response = await axios.get(
-//           `${process.env.REACT_APP_BACKEND_URL}/api/repositories/${owner}/${repository}/commits/${commitSHA}`
-//         );
-//         setCommit(response.data);
-//       } catch (error) {
-//         console.error('Error fetching commit data:', error);
-//       }
-//     };
-
-//     fetchCommitData();
-//   }, [owner, repository, commitSHA]);
-
-//   return (
-//     <div>
-//       {commit && (
-//         <div>
-//           <h2>Commit Details</h2>
-//           <p><strong>Message:</strong> {commit.message}</p>
-//           <p><strong>Author:</strong> {commit.author.name}</p>
-//           <p><strong>Date:</strong> {new Date(commit.author.date).toLocaleString()}</p>
-//           <CodeDiff diffs={commit.files} />
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default CommitDetails;
-
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -57,7 +16,7 @@ function CommitDetails({ owner, repository, commitSHA }) {
 
         const data = response.data;
 
-        // Format the data to match the desired structure
+     
         const formattedData = {
           oid: data.sha,
           message: data.commit.message,
